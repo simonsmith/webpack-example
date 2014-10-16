@@ -4,7 +4,7 @@ This is a small example showing how AMD and CommonJS can be built via Webpack.
 
 ## Flight
 
-[Flight](https://github.com/flightjs/flight) and its ecosystem of components are all written in AMD. In this example the examples component is written in CommonJS format and work seamlessly with the AMD components.
+[Flight](https://github.com/flightjs/flight) and its ecosystem of components are all written in AMD. In this example the component is written in CommonJS format and seamlessly requires AMD dependencies.
 
 ## React
 

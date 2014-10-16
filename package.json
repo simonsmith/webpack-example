@@ -1,0 +1,20 @@
+{
+  "name": "webpack-example",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install --quiet && bower install && webpack",
+    "build": "webpack"
+  },
+  "author": "Simon Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "jsx-loader": "^0.11.2",
+    "webpack": "^1.4.7"
+  },
+  "dependencies": {
+    "react": "^0.11.2"
+  }
+}

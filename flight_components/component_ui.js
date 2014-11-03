@@ -1,14 +1,9 @@
-var flight =      require('flightjs');
-var withRequest = require('flight-request');
+var flight = require('flightjs');
 
-module.exports = flight.component(componentUI, withRequest);
+module.exports = flight.component(componentUI);
 
 function componentUI() {
-  this.attributes({
-    text: 'Hello, I\'m a Flight component'
-  });
-
   this.after('initialize', function() {
-    this.$node.text(this.attr.text);
+    console.log('Ready!');
   });
 }

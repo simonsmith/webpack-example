@@ -1,14 +1,14 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry: {
-    flight: './flight_components/init.js',
+    pageA: './flight_components/init/pageA.js',
+    pageB: './flight_components/init/pageB.js',
     react: './react_components/app.jsx'
   },
   output: {
     path: './built',
     filename: '[name].built.js'
-  },
-  externals: {
-    'jquery': 'jQuery'
   },
   resolve: {
     modulesDirectories: [
@@ -19,12 +19,14 @@ module.exports = {
     ],
     alias: {
       'flightjs': 'flight',
-      'flight-request': 'flight-request/lib/with_request'
     }
   },
   module: {
     loaders: [
       { test: /\.jsx$/, loader: 'jsx-loader?insertPragma=React.DOM' }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('shared', 'shared.js', null, 2)
+  ]
 };
